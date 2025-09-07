@@ -1,0 +1,12 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Content } from '../tos.mdx';
+---
+
+<BaseLayout title="Terms of Service - Embedded Discord Bot" description="Terms of Service for Embedded Discord Bot">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="prose prose-invert max-w-none">
+      <Content client:load />
+    </div>
+  </div>
+</BaseLayout>

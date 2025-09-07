@@ -1,0 +1,48 @@
+---
+import { Header } from "@/components/header";
+import { Footer } from "../components/footer";
+import "../styles/global.css";
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Fix embeds for Twitter, X, reddit, TikTok, Bluesky, Twitch, Instagram, and more!" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/embedded-logo.png" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <!-- Open Graph / Discord embed tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/embed-pic.png" />
+    <meta property="og:url" content={`https://embedded.gallery${Astro.url.pathname}`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Embedded Discord Bot" />
+
+    <!-- Theme color for Discord embed -->
+    <meta name="theme-color" content="#45C4CD" />
+
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://embedded.gallery/embedded-logo.png" />
+  </head>
+  <body>
+    <div class="min-h-screen bg-gradient-to-br from-navy-900 to-slate-800">
+      <Header client:load />
+      <main>
+        <slot />
+      </main>
+      <Footer client:load />
+    </div>
+  </body>
+</html>
