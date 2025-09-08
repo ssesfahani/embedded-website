@@ -17,6 +17,17 @@ const placeholderImages = [
   "/carousel-5.png",
 ];
 
+const getImageDescription = (index: number): string => {
+  const descriptions = [
+    "Twitter/X embed being fixed in Discord chat",
+    "Reddit embed being processed and improved",
+    "TikTok embed with enhanced preview functionality",
+    "Instagram embed working properly in Discord",
+    "Multiple social media embeds working seamlessly"
+  ];
+  return descriptions[index] || `social media embed functionality ${index + 1}`;
+};
+
 interface ImageCarouselProps {
   className?: string;
   autoPlay?: boolean;
@@ -69,8 +80,9 @@ export function ImageCarousel({
               <div className="overflow-hidden rounded-lg">
                 <img
                   src={image}
-                  alt={`Slide ${index + 1}`}
+                  alt={`Embedded Discord Bot screenshot showing ${getImageDescription(index)} - demonstration of embed fixing functionality`}
                   className="h-auto w-full object-cover transition-all hover:scale-105"
+                  loading={index === 0 ? "eager" : "lazy"}
                 />
               </div>
             </div>

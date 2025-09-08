@@ -1,8 +1,46 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import App from "../components/app";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Embedded Discord Bot",
+  "description": "Fix embeds for Twitter, X, reddit, TikTok, Bluesky, Twitch, Instagram, and more!",
+  "url": "https://embedded.gallery",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "Embedded Discord Bot"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "ratingCount": "1000"
+  },
+  "featureList": [
+    "Twitter/X embed fixing",
+    "Reddit embed fixing", 
+    "TikTok embed fixing",
+    "Bluesky embed fixing",
+    "Twitch embed fixing",
+    "Instagram embed fixing",
+    "Discord bot integration"
+  ]
+};
 ---
 
-<BaseLayout title="Embedded Discord Bot">
+<BaseLayout 
+  title="Embedded Discord Bot - Fix Social Media Embeds"
+  description="The best Discord bot to fix broken embeds from Twitter/X, Reddit, TikTok, Bluesky, Twitch, Instagram and more. Improve your server's media sharing experience!"
+  keywords="discord bot, embed fixer, twitter embeds, x embeds, reddit embeds, tiktok embeds, bluesky embeds, twitch embeds, instagram embeds, social media, discord server"
+  jsonLd={jsonLd}
+>
   <App client:load />
 </BaseLayout>

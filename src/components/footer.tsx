@@ -11,7 +11,7 @@ export function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <img
                 src="/embedded-logo.png"
-                alt="Embedded Bot Logo"
+                alt="Embedded Discord Bot Logo - Fix social media embeds"
                 width={32}
                 height={32}
                 className="w-8 h-8"

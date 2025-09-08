@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://embedded.gallery/sitemap-index.xml
+Sitemap: https://embedded.gallery/sitemap-0.xml
+
+# Common crawl delays
+Crawl-delay: 1
+
+# Block unnecessary paths
+Disallow: /api/
+Disallow: /_astro/
+Disallow: /admin/
+Disallow: /private/
+
+# Allow important pages
+Allow: /
+Allow: /privacy-policy/
+Allow: /terms-of-service/

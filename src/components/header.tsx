@@ -13,7 +13,7 @@ export function Header() {
           >
             <img
               src="/embedded-logo.png"
-              alt="Embedded Bot Logo"
+              alt="Embedded Discord Bot Logo - Fix social media embeds"
               width={32}
               height={32}
               className="w-8 h-8"

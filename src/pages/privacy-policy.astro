@@ -3,7 +3,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { Content } from '../privacy-policy.mdx';
 ---
 
-<BaseLayout title="Privacy Policy - Embedded Discord Bot" description="Privacy Policy for Embedded Discord Bot">
+<BaseLayout 
+  title="Privacy Policy - Embedded Discord Bot" 
+  description="Read our privacy policy to understand how Embedded Discord Bot collects, uses, and protects your data when fixing social media embeds."
+  keywords="privacy policy, discord bot privacy, data protection, embedded bot terms"
+>
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-white">
     <div class="prose prose-invert max-w-none">
       <Content client:load />
